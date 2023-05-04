@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Signup Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Signup Form</h2>
+        <form id="sign-up">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter age" required
+                    oninput="validateAge()">
+                <span id="ageError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter phone number" required
+                    oninput="validatePhoneNumber()">
+                <span id="phoneNumberREquirementError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="emails" placeholder="Enter email" required
+                    oninput="validateEmails()">
+                <span id="emailError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required
+                    oninput="validatePassword()">
+                <span id="passwordRequirementsError" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required
+                    oninput="matchPassword()">
+                <span id="passwordMatchError" class="error"></span>
+            </div>
+            <button type="submit" disabled class="btn btn-primary btn-block" id="submitButton">Submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
