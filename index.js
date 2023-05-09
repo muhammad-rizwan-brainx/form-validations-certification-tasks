@@ -6,8 +6,8 @@ var isValidAge;
 
 function validatePhoneNumber() {
     const noError = document.getElementById('phoneNumberREquirementError');
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var phoneNumberRegex = /^\d{11}$/;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const phoneNumberRegex = /^\d{11}$/;
     if (!phoneNumberRegex.test(phoneNumber)) {
         noError.textContent = "Phone number should be an 11-digit number.";
         return false;
@@ -20,7 +20,7 @@ function validatePhoneNumber() {
 }
 
 function validateAge() {
-    var age = document.getElementById("age").value;
+    const age = document.getElementById("age").value;
     const ageError = document.getElementById('ageError');
 
     if (isNaN(age) || age < 18 || age > 151) {
@@ -36,7 +36,7 @@ function validateAge() {
 }
 
 function validateEmails() {
-    var email = document.getElementById("emails");
+    const email = document.getElementById("emails");
     const emails = email.value.split(',');
     const emailError = document.getElementById('emailError');
     const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[\w-]+$/;
@@ -57,7 +57,7 @@ function validateEmails() {
 
 
 function validatePassword() {
-    var passwordInput = document.getElementById("password");
+    const passwordInput = document.getElementById("password");
     const password = passwordInput.value;
     const passwordRequirementsError = document.getElementById('passwordRequirementsError');
     // Check password requirements
@@ -75,9 +75,9 @@ function validatePassword() {
 }
 
 function matchPassword() {
-    var passwordInput = document.getElementById("password");
+    const passwordInput = document.getElementById("password");
     const password = passwordInput.value;
-    var confirmPasswordInput = document.getElementById("confirmPassword");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
     const confirmPassword = confirmPasswordInput.value;
     const passwordMatchError = document.getElementById('passwordMatchError');
     // Check password and confirm password match
