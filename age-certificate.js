@@ -1,5 +1,5 @@
 function enforceMinMaxDay() {
-    var dayInput = document.getElementById("day");
+    const dayInput = document.getElementById("day");
     const day = dayInput.value;
     const minMaxError = document.getElementById('dayInputError');
     if (day < dayInput.min || day > dayInput.max) {
@@ -12,7 +12,7 @@ function enforceMinMaxDay() {
 }
 
 function enforceMinMaxMon() {
-    var monthInput = document.getElementById("month");
+    const monthInput = document.getElementById("month");
     const month = monthInput.value;
     const minMaxError = document.getElementById('monthInputError');
     if (month < monthInput.min || month > monthInput.max) {
@@ -25,7 +25,7 @@ function enforceMinMaxMon() {
 }
 
 function enforceMinMaxYear() {
-    var dayInput = document.getElementById("day");
+    const dayInput = document.getElementById("day");
     const day = dayInput.value;
     const minMaxError = document.getElementById('yearInputError');
     if (day < dayInput.min || day > dayInput.max) {
@@ -38,12 +38,12 @@ function enforceMinMaxYear() {
 }
 
 function checkAge() {
-    var day = document.getElementById("day").value;
-    var month = document.getElementById("month").value;
-    var year = document.getElementById("year").value;
-    var birthDate = new Date(year, month - 1, day);
-    var currentDate = new Date();
-    var age = currentDate.getFullYear() - birthDate.getFullYear();
+    const day = document.getElementById("day").value;
+    const month = document.getElementById("month").value;
+    const year = document.getElementById("year").value;
+    const birthDate = new Date(year, month - 1, day);
+    const currentDate = new Date();
+    const age = currentDate.getFullYear() - birthDate.getFullYear();
 
     if (age < 15) {
         alert("Your age is restricted!");
