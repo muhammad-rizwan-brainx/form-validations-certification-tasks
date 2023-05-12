@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="age-certificate.css">
+    <title>Signup Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Age Certification</h2>
+        <form id="sign-up">
+            <div class="form-group">
+                <label for="firstName">Day:</label>
+                <input type="number" 
+                    class="form-control" 
+                    id="day" min="0" 
+                    max="31" required
+                    oninput="enforceMinMaxDay()"
+                >
+                <span id="dayInputError" 
+                    class="error">
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Month:</label>
+                <input type="number" 
+                    class="form-control" 
+                    id="month" 
+                    min="0" 
+                    max="12" required
+                    oninput=enforceMinMaxMon(this)
+                >
+                <span id="monthInputError" 
+                    class="error">
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="age">Year:</label>
+                <input type="number" 
+                    class="form-control" 
+                    id="year" 
+                    min="1900" 
+                    max="2023" 
+                    required
+                    oninput=enforceMinMaxYear(this)
+                >
+                <span id="yearInputError" 
+                    class="error">
+                </span>
+            </div>
+            <button type="submit" 
+                class="btn btn-primary btn-block" 
+                id="submitButton"
+                onclick="checkAge()">
+                Submit
+            </button>
+        </form>
+    </div>
+    <script src="age-certificate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
